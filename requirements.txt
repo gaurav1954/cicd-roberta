@@ -10,3 +10,4 @@ textstat==0.7.3
 pylint
 pytest
 yoo
+none
