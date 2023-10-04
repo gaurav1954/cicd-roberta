@@ -15,6 +15,11 @@ pipeline {
                     '''
                 }
             }
+            post{
+                sucess{
+                    sh '''docker images prune -f -a --filter "until-24h"'''
+                }
+            }
         }
         //wait false means dont wait to deploy pipeline to finish just trigger it and forget
         stage('Trigger Deploy'){
