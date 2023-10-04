@@ -16,5 +16,13 @@ pipeline {
                 }
             }
         }
+        //wait false means dont wait to deploy pipeline to finish just trigger it and forget
+        stage('Trigger Deploy'){
+            steps{
+                build job:'RobertaDeploy', wait:false, parameters:[
+                    string(name:'Roberta_image_url',value:'gaurav1954/roberta:latest')
+                ]
+            }          
+        }
     }
 }
