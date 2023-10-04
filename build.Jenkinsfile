@@ -16,7 +16,7 @@ pipeline {
                 }
             }
             post{
-                sucess{
+                success{
                     sh '''docker images prune -a '''
                 }
             }
