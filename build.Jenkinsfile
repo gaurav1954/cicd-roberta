@@ -17,7 +17,8 @@ pipeline {
             }
             post{
                 success{
-                    sh '''docker images prune -a -f --filter "until=24h" '''
+                   sh 'docker images prune -a -f --filter "until=24h"'
+
                 }
             }
         }
